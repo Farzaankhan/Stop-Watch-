@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #0f172a;
+    font-family: Arial, sans-serif;
+}
+
+.clock-container {
+    width: min(90%, 500px);
+    text-align: center;
+    padding: 25px;
+}
+
+h1 {
+    color: white;
+    font-size: clamp(28px, 7vw, 50px);
+    margin-bottom: 25px;
+    letter-spacing: 3px;
+}
+
+/* Clock */
+.clock {
+    width: min(70vw, 320px);
+    height: min(70vw, 320px);
+
+    margin: auto;
+
+    border-radius: 50%;
+    background: #111827;
+
+    border: 8px solid #38bdf8;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-shadow:
+        0 0 20px #38bdf8,
+        inset 0 0 30px rgba(56, 189, 248, 0.3);
+}
+
+.clock p {
+    color: #38bdf8;
+    font-size: clamp(25px, 8vw, 45px);
+    font-weight: bold;
+
+    text-shadow: 0 0 15px #38bdf8;
+}
+
+/* Buttons */
+.buttons {
+    margin-top: 30px;
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+button {
+    border: none;
+    padding: 12px 20px;
+
+    background: #38bdf8;
+    color: #0f172a;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    border-radius: 8px;
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+button:hover {
+    background: #7dd3fc;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+/* Mobile */
+@media (max-width: 400px) {
+    .clock-container {
+        padding: 15px;
+    }
+
+    .buttons {
+        gap: 8px;
+    }
+
+    button {
+        flex: 1 1 40%;
+        padding: 11px 10px;
+        font-size: 13px;
+    }
+}
